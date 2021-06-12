@@ -1,0 +1,25 @@
+<body>
+  <div class="filter-container">
+    <form id="filterForm" [formGroup]="form" (ngSubmit)="submit()">
+      <div class="form-group">
+        <label id="searchTextLbl" for="searchText">Food Pairing</label>
+        <input formControlName="searchText"
+               id="searchText"
+               type="text"
+               class="form-control">
+      </div>
+      <button id="submitBtn" class="btn btn-primary" type="submit" [disabled]="f.searchText.touched && f.searchText.invalid">Search</button>
+      <div *ngIf="f.searchText.touched && f.searchText.invalid" class="alert alert-danger">
+        <div id="validationTxt" *ngIf="f.searchText.errors !== null && f.searchText.errors.required">Search Text is required.</div>
+      </div>
+    </form>
+  </div>
+  <div class="grid-container">
+    <app-beer-card *ngFor="let beer of beers | paginate:{itemsPerPage: 12, currentPage: page, totalItems:100}" [beer]="beer" [needRank]="false"></app-beer-card>
+  </div>
+  <pagination-controls class="pagination"
+                       (pageChange)="handlePageChange($event)"
+                       previousLabel="<"
+                       nextLabel=">">
+  </pagination-controls>
+</body>

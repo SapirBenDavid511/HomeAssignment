@@ -1,0 +1,11 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" (click)="updateActive(0)" [routerLink]="['']">BeerBuddy</a>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" *ngFor="let link of links" [class.active]="link.Active" (click)="updateActive(link.ID)">
+        <a class="nav-link" [routerLink]="link.Route">{{link.Name}}</a>
+      </li>
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,47 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+.filter-container {
+  min-height: 5rem;
+}
+
+#filterForm {
+  margin: 3rem;
+}
+
+#searchTextLbl {
+  float: left;
+  width: 7rem;
+}
+
+#searchText {
+  float: left;
+  width: 14rem;
+}
+
+.alert-danger {
+  width: 14rem;
+  display: inline-table;
+  right: 329px;
+  top: 39px;
+  height: 3rem;
+}
+
+#validationTxt {
+  text-align: center;
+}
+
+#submitBtn {
+  float: left;
+  margin-left: 25px;
+  width: 5rem;
+}
+
+.pagination {
+  float: right;
+  margin-right: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}

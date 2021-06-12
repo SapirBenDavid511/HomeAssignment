@@ -1,0 +1,47 @@
+.grid-item {
+  padding: 2rem;
+  font-size: 2rem;
+  text-align: center;
+  border: 1px solid black;
+  margin: 3rem;
+  min-height: 32rem;
+  min-width: 16rem;
+}
+
+.beerImg {
+  margin-left: 35px;
+  padding: 0rem;
+  width: 6rem;
+  min-height: 24rem;
+  cursor: pointer;
+}
+
+#ratingIcon {
+  display: block;
+  float: right;
+  cursor: pointer;
+}
+
+.beerName {
+  display: block;
+  font-size: 20px;
+  cursor: default;
+}
+
+.checked {
+  color: orange;
+}
+
+.modalValue {
+  display: block;
+}
+
+.rank {
+  float: left;
+  font-size: 20px;
+  position: absolute;
+}
+
+.selectRank {
+  min-width: 3rem;
+}

@@ -1,0 +1,21 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+.favorite-container {
+  min-height: 3rem;
+  margin-left: 3rem;
+}
+
+.headerTitle {
+  margin-top: 2rem;
+}
+
+.removeBtnDiv {
+  margin-left: 3rem;
+}
+
+#removeBtn {
+  width: 8rem;
+}

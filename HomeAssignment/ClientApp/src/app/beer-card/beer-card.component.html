@@ -1,0 +1,35 @@
+<body>
+  <div class="grid-item">
+    <div class="rank" *ngIf="needRank">
+      <p>Rank</p>
+      <select class="selectRank" (change)="chooseRank($event)">
+        <option value=""></option>
+        <option *ngFor="let i of numbers" value={{i}} [selected]="isSelected(i)">{{i}}</option>
+      </select>
+    </div>
+    <div id="ratingIcon" (click)="updateFavorite()">
+      <span class="fa fa-star" [class.checked]="beer.is_favorite"></span>
+    </div>
+    <img class="beerImg" src="{{beer.image_url}}" alt="Product Image" (click)="this.openModal(modalData)">
+    <span class="beerName">{{beer.name}}</span>
+  </div>
+</body>
+
+
+<ng-template #modalData let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">{{beer.name}}</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">×</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div *ngFor="let field of fields">
+      <label><b>{{field.Name}}</b></label>
+      <span class="modalValue">{{field.Value}}</span>
+    </div>
+  </div>
+</ng-template>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">

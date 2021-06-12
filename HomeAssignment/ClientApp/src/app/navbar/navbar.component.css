@@ -1,0 +1,14 @@
+a.navbar-brand {
+  margin-left: 3rem;
+  font-size:20px;
+}
+
+.active {
+  border-bottom-width: thick;
+  border-bottom-color: #2198ee;
+  border-bottom-style: solid;
+}
+
+.nav-link {
+  font-size: 20px;
+}
